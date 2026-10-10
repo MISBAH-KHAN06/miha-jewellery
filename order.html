@@ -1,0 +1,1062 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>MIHA | Order Confirmed</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+:root{
+    --black:#171717;
+    --gold:#c7a15a;
+    --gold-light:#ead39d;
+    --cream:#faf7f0;
+    --white:#fff;
+    --gray:#777;
+    --green:#4f8a62;
+    --border:#e7e3dc;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:"DM Sans",sans-serif;
+
+    background:var(--cream);
+
+    color:var(--black);
+}
+
+/* ================= NAVBAR ================= */
+
+.navbar{
+    height:76px;
+
+    background:white;
+
+    border-bottom:1px solid var(--border);
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    padding:0 7%;
+}
+
+.logo{
+    font-family:"Playfair Display",serif;
+
+    font-size:29px;
+
+    font-weight:700;
+
+    letter-spacing:5px;
+}
+
+.logo span{
+    color:var(--gold);
+}
+
+.nav-links{
+    display:flex;
+
+    gap:30px;
+
+    list-style:none;
+}
+
+.nav-links a{
+    text-decoration:none;
+
+    color:#333;
+
+    font-size:13px;
+
+    font-weight:600;
+}
+
+.nav-links a:hover{
+    color:var(--gold);
+}
+
+.nav-icons{
+    display:flex;
+
+    gap:16px;
+}
+
+.nav-icons a{
+    color:#222;
+
+    text-decoration:none;
+
+    font-size:20px;
+}
+
+/* ================= HERO ================= */
+
+.confirmation{
+    max-width:900px;
+
+    margin:60px auto 30px;
+
+    padding:0 20px;
+
+    text-align:center;
+}
+
+.check{
+    width:78px;
+
+    height:78px;
+
+    border-radius:50%;
+
+    background:var(--green);
+
+    color:white;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    margin:0 auto 22px;
+
+    font-size:38px;
+
+    box-shadow:
+        0 0 0 10px rgba(79,138,98,.08);
+}
+
+.confirmation span{
+    color:var(--gold);
+
+    text-transform:uppercase;
+
+    letter-spacing:3px;
+
+    font-size:11px;
+}
+
+.confirmation h1{
+    font-family:"Playfair Display",serif;
+
+    font-size:48px;
+
+    margin:10px 0;
+}
+
+.confirmation p{
+    color:var(--gray);
+
+    line-height:1.6;
+}
+
+/* ================= ORDER INFO ================= */
+
+.order-number{
+    margin-top:20px;
+
+    font-size:13px;
+
+    color:#555;
+}
+
+.order-number strong{
+    color:var(--black);
+}
+
+/* ================= MAIN ================= */
+
+.page{
+    max-width:1000px;
+
+    margin:0 auto 80px;
+
+    padding:0 20px;
+}
+
+.card{
+    background:white;
+
+    border:1px solid var(--border);
+
+    margin-top:20px;
+
+    padding:30px;
+}
+
+/* ================= DELIVERY ================= */
+
+.delivery-header{
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:30px;
+}
+
+.delivery-header h2{
+    font-family:"Playfair Display",serif;
+
+    font-size:25px;
+}
+
+.estimated{
+    text-align:right;
+}
+
+.estimated span{
+    display:block;
+
+    color:#999;
+
+    font-size:11px;
+
+    text-transform:uppercase;
+
+    letter-spacing:1px;
+}
+
+.estimated strong{
+    color:var(--green);
+
+    font-size:14px;
+}
+
+/* ================= TIMELINE ================= */
+
+.timeline{
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    position:relative;
+
+    margin:30px 20px 10px;
+}
+
+.timeline::before{
+    content:"";
+
+    position:absolute;
+
+    top:19px;
+
+    left:8%;
+
+    right:8%;
+
+    height:3px;
+
+    background:#e7e2d8;
+
+    z-index:0;
+}
+
+.timeline-progress{
+    position:absolute;
+
+    top:19px;
+
+    left:8%;
+
+    width:30%;
+
+    height:3px;
+
+    background:var(--gold);
+
+    z-index:1;
+}
+
+.timeline-item{
+    text-align:center;
+
+    position:relative;
+
+    z-index:2;
+}
+
+.timeline-circle{
+    width:40px;
+
+    height:40px;
+
+    border-radius:50%;
+
+    background:#e6e1d8;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    margin:auto;
+
+    color:#888;
+
+    font-weight:700;
+
+    border:4px solid var(--cream);
+}
+
+.timeline-item.active .timeline-circle{
+    background:var(--gold);
+
+    color:white;
+}
+
+.timeline-item h4{
+    font-size:12px;
+
+    margin-top:12px;
+}
+
+.timeline-item p{
+    font-size:10px;
+
+    color:#999;
+
+    margin-top:4px;
+}
+
+/* ================= ORDER CONTENT ================= */
+
+.order-grid{
+    display:grid;
+
+    grid-template-columns:1.3fr .7fr;
+
+    gap:20px;
+}
+
+.section-title{
+    font-family:"Playfair Display",serif;
+
+    font-size:21px;
+
+    margin-bottom:20px;
+}
+
+/* ================= PRODUCT ================= */
+
+.product{
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    padding-bottom:20px;
+
+    border-bottom:1px solid var(--border);
+}
+
+.product img{
+    width:90px;
+
+    height:90px;
+
+    object-fit:cover;
+}
+
+.product-info{
+    flex:1;
+}
+
+.product-info h3{
+    font-family:"Playfair Display",serif;
+
+    font-size:18px;
+}
+
+.product-info p{
+    color:#888;
+
+    font-size:12px;
+
+    margin-top:6px;
+}
+
+.product-price{
+    font-weight:700;
+}
+
+/* ================= ADDRESS ================= */
+
+.address{
+    background:#faf8f3;
+
+    padding:20px;
+
+    line-height:1.8;
+
+    font-size:13px;
+
+    color:#666;
+}
+
+.address strong{
+    display:block;
+
+    color:#222;
+
+    margin-bottom:4px;
+}
+
+/* ================= SUMMARY ================= */
+
+.summary-row{
+    display:flex;
+
+    justify-content:space-between;
+
+    padding:9px 0;
+
+    font-size:13px;
+
+    color:#777;
+}
+
+.summary-total{
+    display:flex;
+
+    justify-content:space-between;
+
+    border-top:1px solid var(--border);
+
+    margin-top:10px;
+
+    padding-top:17px;
+
+    font-size:18px;
+
+    font-weight:700;
+}
+
+.summary-total span:last-child{
+    color:var(--gold);
+}
+
+/* ================= BUTTONS ================= */
+
+.buttons{
+    display:flex;
+
+    justify-content:center;
+
+    gap:12px;
+
+    margin-top:30px;
+}
+
+.btn{
+    padding:14px 25px;
+
+    text-decoration:none;
+
+    font-size:12px;
+
+    font-weight:700;
+
+    letter-spacing:.5px;
+
+    transition:.3s;
+}
+
+.primary{
+    background:var(--black);
+
+    color:white;
+}
+
+.primary:hover{
+    background:var(--gold);
+}
+
+.secondary{
+    border:1px solid var(--black);
+
+    color:var(--black);
+
+    background:white;
+}
+
+.secondary:hover{
+    background:var(--black);
+
+    color:white;
+}
+
+/* ================= HELP ================= */
+
+.help{
+    text-align:center;
+
+    margin-top:25px;
+
+    color:#888;
+
+    font-size:11px;
+}
+
+.help a{
+    color:var(--gold);
+
+    text-decoration:none;
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+    background:#111;
+
+    color:#777;
+
+    text-align:center;
+
+    padding:25px;
+
+    font-size:11px;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:750px){
+
+    .nav-links{
+        display:none;
+    }
+
+    .confirmation h1{
+        font-size:38px;
+    }
+
+    .timeline{
+        grid-template-columns:1fr;
+
+        gap:22px;
+
+        margin-left:0;
+
+        margin-right:0;
+    }
+
+    .timeline::before,
+    .timeline-progress{
+        display:none;
+    }
+
+    .timeline-item{
+        display:flex;
+
+        align-items:center;
+
+        text-align:left;
+
+        gap:15px;
+    }
+
+    .timeline-circle{
+        margin:0;
+        flex-shrink:0;
+    }
+
+    .timeline-item h4{
+        margin:0;
+    }
+
+    .timeline-item p{
+        margin-top:4px;
+    }
+
+    .order-grid{
+        grid-template-columns:1fr;
+    }
+
+    .delivery-header{
+        flex-direction:column;
+
+        align-items:flex-start;
+
+        gap:15px;
+    }
+
+    .estimated{
+        text-align:left;
+    }
+
+}
+
+@media(max-width:500px){
+
+    .card{
+        padding:20px;
+    }
+
+    .buttons{
+        flex-direction:column;
+    }
+
+    .btn{
+        text-align:center;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- ================= NAVBAR ================= -->
+
+<header class="navbar">
+
+    <div class="logo">
+        MIHA<span>.</span>
+    </div>
+
+
+    <ul class="nav-links">
+
+        <li>
+            <a href="homepg.html">
+                HOME
+            </a>
+        </li>
+
+        <li>
+            <a href="necklace.html">
+                SHOP
+            </a>
+        </li>
+
+        <li>
+            <a href="aboutmiha.html">
+                ABOUT
+            </a>
+        </li>
+
+        <li>
+            <a href="contactmiha.html">
+                CONTACT
+            </a>
+        </li>
+
+    </ul>
+
+
+    <div class="nav-icons">
+
+        <a href="login.php">♙</a>
+
+        <a href="#">♡</a>
+
+        <a href="#">🛒</a>
+
+    </div>
+
+</header>
+
+
+<!-- ================= CONFIRMATION ================= -->
+
+<section class="confirmation">
+
+    <div class="check">
+        ✓
+    </div>
+
+    <span>
+        Order Confirmed
+    </span>
+
+    <h1>
+        Thank you for your order!
+    </h1>
+
+    <p>
+        Your jewellery is being prepared with care.
+        We'll send you an email confirmation with your
+        order details shortly.
+    </p>
+
+
+    <div class="order-number">
+
+        Order Number:
+        <strong id="orderNumber">
+            #MIHA-2026-1048
+        </strong>
+
+    </div>
+
+</section>
+
+
+<!-- ================= MAIN ================= -->
+
+<main class="page">
+
+
+    <!-- DELIVERY TRACKING -->
+
+    <section class="card">
+
+        <div class="delivery-header">
+
+            <h2>
+                Delivery Status
+            </h2>
+
+            <div class="estimated">
+
+                <span>
+                    Estimated Delivery
+                </span>
+
+                <strong>
+                    3–5 Business Days
+                </strong>
+
+            </div>
+
+        </div>
+
+
+        <div class="timeline">
+
+
+            <div class="timeline-progress"></div>
+
+
+            <div class="timeline-item active">
+
+                <div class="timeline-circle">
+                    ✓
+                </div>
+
+                <div>
+
+                    <h4>
+                        Order Placed
+                    </h4>
+
+                    <p>
+                        Confirmed
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="timeline-item active">
+
+                <div class="timeline-circle">
+                    ✓
+                </div>
+
+                <div>
+
+                    <h4>
+                        Processing
+                    </h4>
+
+                    <p>
+                        Preparing your order
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="timeline-item">
+
+                <div class="timeline-circle">
+                    3
+                </div>
+
+                <div>
+
+                    <h4>
+                        Shipped
+                    </h4>
+
+                    <p>
+                        Coming soon
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="timeline-item">
+
+                <div class="timeline-circle">
+                    4
+                </div>
+
+                <div>
+
+                    <h4>
+                        Delivered
+                    </h4>
+
+                    <p>
+                        Coming soon
+                    </p>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- ORDER DETAILS -->
+
+    <div class="order-grid">
+
+
+        <!-- PRODUCT -->
+
+        <section class="card">
+
+            <h2 class="section-title">
+                Your Order
+            </h2>
+
+
+            <div class="product">
+
+                <img src="n1.jpg">
+
+                <div class="product-info">
+
+                    <h3>
+                        Pearl Necklace
+                    </h3>
+
+                    <p>
+                        Quantity: 1
+                    </p>
+
+                    <p>
+                        Jewellery Collection
+                    </p>
+
+                </div>
+
+                <div class="product-price">
+                    ₹400
+                </div>
+
+            </div>
+
+
+            <div style="margin-top:20px;">
+
+                <div class="summary-row">
+
+                    <span>
+                        Subtotal
+                    </span>
+
+                    <span>
+                        ₹400
+                    </span>
+
+                </div>
+
+
+                <div class="summary-row">
+
+                    <span>
+                        Shipping
+                    </span>
+
+                    <span>
+                        FREE
+                    </span>
+
+                </div>
+
+
+                <div class="summary-row">
+
+                    <span>
+                        Tax
+                    </span>
+
+                    <span>
+                        ₹20
+                    </span>
+
+                </div>
+
+
+                <div class="summary-total">
+
+                    <span>
+                        Total
+                    </span>
+
+                    <span>
+                        ₹420
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ADDRESS -->
+
+        <section class="card">
+
+            <h2 class="section-title">
+                Delivery Address
+            </h2>
+
+
+            <div class="address">
+
+                <strong id="customerName">
+                    Your Name
+                </strong>
+
+                <span id="customerAddress">
+                    Your delivery address
+                </span>
+
+                <br>
+
+                <span id="customerCity">
+                    City, State
+                </span>
+
+                <br>
+
+                India
+
+            </div>
+
+
+            <div style="margin-top:25px;">
+
+                <h2 class="section-title">
+                    Payment
+                </h2>
+
+                <div class="address">
+
+                    <strong>
+                        Payment Method
+                    </strong>
+
+                    <span>
+                        Payment successfully received
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+    </div>
+
+
+    <!-- BUTTONS -->
+
+    <div class="buttons">
+
+        <a
+            href="homepg.html"
+            class="btn primary"
+        >
+            CONTINUE SHOPPING
+        </a>
+
+
+        <a
+            href="contactmiha.html"
+            class="btn secondary"
+        >
+            NEED HELP?
+        </a>
+
+    </div>
+
+
+    <div class="help">
+
+        Questions about your order?
+        <a href="contactmiha.html">
+            Contact MIHA Support
+        </a>
+
+    </div>
+
+
+</main>
+
+
+<footer>
+
+    © 2026 MIHA Jewellery · Thank you for shopping with us
+
+</footer>
+
+
+<script>
+
+/* Generate a slightly different order number */
+
+const randomNumber =
+    Math.floor(1000 + Math.random() * 9000);
+
+document.getElementById("orderNumber")
+    .textContent =
+    "#MIHA-2026-" + randomNumber;
+
+</script>
+
+
+</body>
+
+</html>

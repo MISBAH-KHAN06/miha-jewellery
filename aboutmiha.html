@@ -1,0 +1,1787 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>About MIHA | Jewellery</title>
+
+<!-- GOOGLE FONTS -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+      rel="stylesheet">
+
+
+<style>
+
+/* =========================================================
+   RESET
+========================================================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:"DM Sans", sans-serif;
+    background:#faf7f0;
+    color:#171717;
+    overflow-x:hidden;
+}
+
+img{
+    max-width:100%;
+}
+
+a{
+    text-decoration:none;
+}
+
+
+/* =========================================================
+   NAVBAR
+========================================================= */
+
+.navbar{
+
+    height:78px;
+
+    background:#171717;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    padding:0 6%;
+
+    position:sticky;
+    top:0;
+
+    z-index:1000;
+
+}
+
+
+/* LOGO */
+
+.logo{
+
+    font-family:"Playfair Display", serif;
+
+    font-size:31px;
+
+    font-weight:600;
+
+    letter-spacing:5px;
+
+    color:#c7a15a;
+
+    line-height:1;
+
+}
+
+
+/* NAVIGATION */
+
+.nav-links{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:34px;
+
+}
+
+.nav-links a{
+
+    position:relative;
+
+    color:#ffffff;
+
+    font-size:13px;
+
+    font-weight:500;
+
+    letter-spacing:.3px;
+
+    transition:.3s;
+
+}
+
+.nav-links a::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    bottom:-8px;
+
+    width:0;
+
+    height:1px;
+
+    background:#c7a15a;
+
+    transition:.3s;
+
+}
+
+.nav-links a:hover{
+
+    color:#c7a15a;
+
+}
+
+.nav-links a:hover::after{
+
+    width:100%;
+
+}
+
+
+/* RIGHT ICONS */
+
+.nav-icons{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:20px;
+
+}
+
+.nav-icons a{
+
+    width:28px;
+
+    height:28px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    color:#ffffff;
+
+    transition:.3s;
+
+}
+
+.nav-icons a:hover{
+
+    color:#c7a15a;
+
+    transform:translateY(-2px);
+
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero{
+
+    min-height:650px;
+
+    position:relative;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    text-align:center;
+
+    overflow:hidden;
+
+    background-image:
+
+        linear-gradient(
+            rgba(20,18,17,.48),
+            rgba(20,18,17,.48)
+        ),
+
+        url("bg6.jpg");
+
+    background-size:cover;
+
+    background-position:center;
+
+    background-repeat:no-repeat;
+
+}
+
+
+/* subtle overlay */
+
+.hero::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(0,0,0,.15),
+            rgba(0,0,0,.45)
+        );
+
+    pointer-events:none;
+
+}
+
+
+/* HERO CONTENT */
+
+.hero-content{
+
+    position:relative;
+
+    z-index:2;
+
+    max-width:850px;
+
+    padding:40px 25px;
+
+    color:white;
+
+}
+
+.hero-label{
+
+    display:inline-block;
+
+    color:#e0bb70;
+
+    font-size:12px;
+
+    font-weight:600;
+
+    letter-spacing:5px;
+
+    text-transform:uppercase;
+
+    margin-bottom:25px;
+
+}
+
+.hero h1{
+
+    font-family:"Playfair Display", serif;
+
+    font-size:76px;
+
+    line-height:1.05;
+
+    font-weight:600;
+
+    margin-bottom:25px;
+
+    text-shadow:
+        0 3px 20px rgba(0,0,0,.25);
+
+}
+
+.hero h1 span{
+
+    color:#d9b66d;
+
+}
+
+.hero-description{
+
+    max-width:650px;
+
+    margin:auto;
+
+    color:#f4f4f4;
+
+    font-size:16px;
+
+    line-height:1.9;
+
+}
+
+.hero-button{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    margin-top:35px;
+
+    padding:15px 30px;
+
+    border:1px solid #c7a15a;
+
+    background:#c7a15a;
+
+    color:#171717;
+
+    font-size:12px;
+
+    font-weight:700;
+
+    letter-spacing:1.8px;
+
+    transition:.3s;
+
+}
+
+.hero-button:hover{
+
+    background:transparent;
+
+    color:white;
+
+    border-color:white;
+
+}
+
+
+/* SCROLL INDICATOR */
+
+.scroll-indicator{
+
+    position:absolute;
+
+    bottom:25px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    z-index:3;
+
+    color:white;
+
+    font-size:10px;
+
+    letter-spacing:3px;
+
+    text-transform:uppercase;
+
+}
+
+.scroll-line{
+
+    width:1px;
+
+    height:35px;
+
+    background:#c7a15a;
+
+    margin:8px auto 0;
+
+}
+
+
+/* =========================================================
+   INTRODUCTION
+========================================================= */
+
+.intro{
+
+    max-width:1200px;
+
+    margin:auto;
+
+    padding:110px 30px;
+
+}
+
+.intro-grid{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:90px;
+
+    align-items:center;
+
+}
+
+
+/* LEFT TEXT */
+
+.section-label{
+
+    color:#b18a48;
+
+    font-size:11px;
+
+    font-weight:700;
+
+    letter-spacing:4px;
+
+    text-transform:uppercase;
+
+}
+
+.intro h2{
+
+    font-family:"Playfair Display", serif;
+
+    font-size:50px;
+
+    line-height:1.15;
+
+    font-weight:600;
+
+    margin:18px 0 28px;
+
+}
+
+.intro h2 span{
+
+    color:#b28c4d;
+
+}
+
+.intro p{
+
+    color:#666;
+
+    font-size:15px;
+
+    line-height:1.9;
+
+    margin-bottom:18px;
+
+}
+
+
+/* RIGHT QUOTE */
+
+.quote-box{
+
+    position:relative;
+
+    padding:55px 45px;
+
+    background:#171717;
+
+    color:white;
+
+}
+
+.quote-box::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:0;
+
+    width:5px;
+
+    height:100%;
+
+    background:#c7a15a;
+
+}
+
+.quote-mark{
+
+    color:#c7a15a;
+
+    font-family:"Playfair Display", serif;
+
+    font-size:70px;
+
+    line-height:.5;
+
+    margin-bottom:20px;
+
+}
+
+.quote-box p{
+
+    color:#f0f0f0;
+
+    font-family:"Playfair Display", serif;
+
+    font-size:25px;
+
+    line-height:1.5;
+
+}
+
+.quote-box small{
+
+    display:block;
+
+    color:#aaa;
+
+    margin-top:25px;
+
+    font-size:11px;
+
+    letter-spacing:2px;
+
+    text-transform:uppercase;
+
+}
+
+
+/* =========================================================
+   COLLECTION SECTION
+========================================================= */
+
+.collection-section{
+
+    background:#ffffff;
+
+    padding:100px 6%;
+
+}
+
+.section-heading{
+
+    text-align:center;
+
+    max-width:700px;
+
+    margin:0 auto 60px;
+
+}
+
+.section-heading .section-label{
+
+    display:block;
+
+    margin-bottom:15px;
+
+}
+
+.section-heading h2{
+
+    font-family:"Playfair Display", serif;
+
+    font-size:46px;
+
+    margin-bottom:18px;
+
+}
+
+.section-heading p{
+
+    color:#777;
+
+    font-size:14px;
+
+    line-height:1.8;
+
+}
+
+
+/* COLLECTION GRID */
+
+.collection-grid{
+
+    max-width:1250px;
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:20px;
+
+}
+
+.collection-card{
+
+    position:relative;
+
+    height:420px;
+
+    overflow:hidden;
+
+    background:#eee;
+
+}
+
+.collection-card img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    display:block;
+
+    transition:transform .7s ease;
+
+}
+
+.collection-card:hover img{
+
+    transform:scale(1.07);
+
+}
+
+.collection-overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    display:flex;
+
+    align-items:flex-end;
+
+    padding:25px;
+
+    background:
+        linear-gradient(
+            transparent 45%,
+            rgba(0,0,0,.78)
+        );
+
+}
+
+.collection-overlay h3{
+
+    color:white;
+
+    font-family:"Playfair Display", serif;
+
+    font-size:25px;
+
+}
+
+
+/* =========================================================
+   VALUES
+========================================================= */
+
+.values{
+
+    padding:105px 6%;
+
+    background:#faf7f0;
+
+}
+
+.values-grid{
+
+    max-width:1150px;
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:25px;
+
+}
+
+.value-card{
+
+    text-align:center;
+
+    background:white;
+
+    padding:45px 30px;
+
+    border:1px solid #eee7da;
+
+    transition:.35s;
+
+}
+
+.value-card:hover{
+
+    transform:translateY(-7px);
+
+    box-shadow:0 18px 40px rgba(0,0,0,.08);
+
+}
+
+.value-icon{
+
+    width:58px;
+
+    height:58px;
+
+    margin:0 auto 25px;
+
+    border:1px solid #c7a15a;
+
+    color:#c7a15a;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:24px;
+
+}
+
+.value-card h3{
+
+    font-family:"Playfair Display", serif;
+
+    font-size:23px;
+
+    margin-bottom:14px;
+
+}
+
+.value-card p{
+
+    color:#777;
+
+    font-size:13px;
+
+    line-height:1.8;
+
+}
+
+
+/* =========================================================
+   FINAL STORY
+========================================================= */
+
+.final-story{
+
+    min-height:500px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    text-align:center;
+
+    position:relative;
+
+    background:
+
+        linear-gradient(
+            rgba(0,0,0,.58),
+            rgba(0,0,0,.58)
+        ),
+
+        url("backg.jpg");
+
+    background-size:cover;
+
+    background-position:center;
+
+    padding:80px 25px;
+
+}
+
+.final-story-content{
+
+    max-width:750px;
+
+    color:white;
+
+}
+
+.final-story-content .section-label{
+
+    color:#d5ad62;
+
+}
+
+.final-story h2{
+
+    font-family:"Playfair Display", serif;
+
+    font-size:55px;
+
+    margin:20px 0;
+
+}
+
+.final-story p{
+
+    color:#ddd;
+
+    font-size:15px;
+
+    line-height:1.9;
+
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer{
+
+    background:#171717;
+
+    color:white;
+
+    padding:65px 6% 30px;
+
+}
+
+.footer-grid{
+
+    max-width:1400px;
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:2fr 1fr 1fr 1fr;
+
+    gap:55px;
+
+}
+
+.footer-logo{
+
+    font-family:"Playfair Display", serif;
+
+    font-size:31px;
+
+    color:#c7a15a;
+
+    letter-spacing:4px;
+
+    margin-bottom:18px;
+
+}
+
+.footer-column h3{
+
+    color:#c7a15a;
+
+    font-size:12px;
+
+    letter-spacing:2px;
+
+    margin-bottom:20px;
+
+}
+
+.footer-column p{
+
+    color:#999;
+
+    font-size:13px;
+
+    line-height:1.9;
+
+}
+
+.footer-column a{
+
+    display:block;
+
+    color:#999;
+
+    font-size:13px;
+
+    margin-bottom:11px;
+
+    transition:.3s;
+
+}
+
+.footer-column a:hover{
+
+    color:white;
+
+    padding-left:3px;
+
+}
+
+.copyright{
+
+    max-width:1400px;
+
+    margin:45px auto 0;
+
+    padding-top:22px;
+
+    border-top:1px solid #333;
+
+    text-align:center;
+
+    color:#666;
+
+    font-size:11px;
+
+    letter-spacing:.5px;
+
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media(max-width:1100px){
+
+    .nav-links{
+
+        gap:20px;
+
+    }
+
+    .hero h1{
+
+        font-size:65px;
+
+    }
+
+    .collection-grid{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+}
+
+
+@media(max-width:850px){
+
+    .nav-links{
+
+        display:none;
+
+    }
+
+    .hero{
+
+        min-height:600px;
+
+    }
+
+    .hero h1{
+
+        font-size:55px;
+
+    }
+
+    .intro-grid{
+
+        grid-template-columns:1fr;
+
+        gap:50px;
+
+    }
+
+    .values-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .footer-grid{
+
+        grid-template-columns:1fr 1fr;
+
+    }
+
+}
+
+
+@media(max-width:600px){
+
+    .navbar{
+
+        padding:0 20px;
+
+    }
+
+    .logo{
+
+        font-size:26px;
+
+    }
+
+    .hero{
+
+        min-height:570px;
+
+    }
+
+    .hero h1{
+
+        font-size:43px;
+
+    }
+
+    .hero-description{
+
+        font-size:14px;
+
+    }
+
+    .intro{
+
+        padding:75px 20px;
+
+    }
+
+    .intro h2{
+
+        font-size:38px;
+
+    }
+
+    .quote-box{
+
+        padding:40px 30px;
+
+    }
+
+    .quote-box p{
+
+        font-size:21px;
+
+    }
+
+    .collection-section{
+
+        padding:75px 20px;
+
+    }
+
+    .collection-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .collection-card{
+
+        height:400px;
+
+    }
+
+    .values{
+
+        padding:75px 20px;
+
+    }
+
+    .final-story h2{
+
+        font-size:40px;
+
+    }
+
+    .footer-grid{
+
+        grid-template-columns:1fr;
+
+        gap:35px;
+
+    }
+
+}
+
+
+/* EXTRA SMALL */
+
+@media(max-width:400px){
+
+    .hero h1{
+
+        font-size:37px;
+
+    }
+
+    .hero-label{
+
+        font-size:10px;
+
+        letter-spacing:3px;
+
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     NAVBAR
+===================================================== -->
+
+<nav class="navbar">
+
+
+    <!-- LOGO -->
+
+    <a href="homepg.html" class="logo">
+        MIHA
+    </a>
+
+
+    <!-- NAV LINKS -->
+
+    <div class="nav-links">
+
+        <a href="homepg.html">HOME</a>
+
+        <a href="necklace.html">NECKLACES</a>
+
+        <a href="bracelets.html">BRACELETS</a>
+
+        <a href="earing.html">EARRINGS</a>
+
+        <a href="ring.html">RINGS</a>
+
+        <a href="aboutmiha.html">ABOUT</a>
+
+        <a href="contactmiha.html">CONTACT</a>
+
+    </div>
+
+
+    <!-- ACCOUNT + BAG -->
+
+    <div class="nav-icons">
+
+
+        <!-- ACCOUNT -->
+
+        <a href="customer.html" title="My Account">
+
+            <svg
+                width="23"
+                height="23"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+            >
+
+                <circle
+                    cx="12"
+                    cy="7"
+                    r="4"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                />
+
+                <path
+                    d="M4 21C4.8 16.8 7.4 14.5 12 14.5C16.6 14.5 19.2 16.8 20 21"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                />
+
+            </svg>
+
+        </a>
+
+
+        <!-- BAG -->
+
+        <a href="customer.html" title="Shopping Bag">
+
+            <svg
+                width="23"
+                height="23"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+            >
+
+                <path
+                    d="M5 8.5H19L18 21H6L5 8.5Z"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                />
+
+                <path
+                    d="M9 9V6.5C9 4.8 10.3 3.5 12 3.5C13.7 3.5 15 4.8 15 6.5V9"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                />
+
+            </svg>
+
+        </a>
+
+    </div>
+
+</nav>
+
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<section class="hero">
+
+
+    <div class="hero-content">
+
+
+        <div class="hero-label">
+            THE MIHA STORY
+        </div>
+
+
+        <h1>
+            Jewellery
+            <br>
+            <span>with a story.</span>
+        </h1>
+
+
+        <p class="hero-description">
+
+            More than an accessory.
+            Every MIHA piece is designed to become part
+            of the moments you choose to remember.
+
+        </p>
+
+
+        <a
+            href="#our-story"
+            class="hero-button"
+        >
+
+            DISCOVER MIHA
+
+        </a>
+
+    </div>
+
+
+    <div class="scroll-indicator">
+
+        SCROLL
+
+        <div class="scroll-line"></div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     OUR STORY
+===================================================== -->
+
+<section class="intro" id="our-story">
+
+
+    <div class="intro-grid">
+
+
+        <!-- TEXT -->
+
+        <div>
+
+            <div class="section-label">
+                OUR STORY
+            </div>
+
+
+            <h2>
+
+                Made to be
+                <span>remembered.</span>
+
+            </h2>
+
+
+            <p>
+
+                MIHA is a jewellery brand created around
+                the idea that jewellery is more than an
+                accessory.
+
+            </p>
+
+
+            <p>
+
+                Every piece is chosen to complement your
+                personal style and become part of the
+                moments you treasure.
+
+            </p>
+
+
+            <p>
+
+                From delicate necklaces and elegant rings
+                to statement earrings and beautiful
+                bracelets, MIHA brings together designs
+                for everyday elegance and special occasions.
+
+            </p>
+
+        </div>
+
+
+        <!-- QUOTE -->
+
+        <div class="quote-box">
+
+
+            <div class="quote-mark">
+                “
+            </div>
+
+
+            <p>
+
+                The right piece of jewellery doesn't
+                just complete your look — it becomes
+                part of your story.
+
+            </p>
+
+
+            <small>
+                The MIHA Philosophy
+            </small>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     COLLECTION
+===================================================== -->
+
+<section class="collection-section">
+
+
+    <div class="section-heading">
+
+        <span class="section-label">
+            EXPLORE MIHA
+        </span>
+
+
+        <h2>
+            Designed for every moment.
+        </h2>
+
+
+        <p>
+
+            Discover pieces designed to complement
+            everyday looks, celebrations and everything
+            in between.
+
+        </p>
+
+    </div>
+
+
+    <div class="collection-grid">
+
+
+        <!-- NECKLACES -->
+
+        <a
+            href="necklace.html"
+            class="collection-card"
+        >
+
+            <img
+                src="n2.jpg"
+                alt="MIHA Necklaces"
+            >
+
+            <div class="collection-overlay">
+
+                <h3>
+                    Necklaces
+                </h3>
+
+            </div>
+
+        </a>
+
+
+        <!-- BRACELETS -->
+
+        <a
+            href="bracelets.html"
+            class="collection-card"
+        >
+
+            <img
+                src="b3.jpg"
+                alt="MIHA Bracelets"
+            >
+
+            <div class="collection-overlay">
+
+                <h3>
+                    Bracelets
+                </h3>
+
+            </div>
+
+        </a>
+
+
+        <!-- EARRINGS -->
+
+        <a
+            href="earing.html"
+            class="collection-card"
+        >
+
+            <img
+                src="e4.jpg"
+                alt="MIHA Earrings"
+            >
+
+            <div class="collection-overlay">
+
+                <h3>
+                    Earrings
+                </h3>
+
+            </div>
+
+        </a>
+
+
+        <!-- RINGS -->
+
+        <a
+            href="ring.html"
+            class="collection-card"
+        >
+
+            <img
+                src="r6.jpg"
+                alt="MIHA Rings"
+            >
+
+            <div class="collection-overlay">
+
+                <h3>
+                    Rings
+                </h3>
+
+            </div>
+
+        </a>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     VALUES
+===================================================== -->
+
+<section class="values">
+
+
+    <div class="section-heading">
+
+        <span class="section-label">
+            WHY MIHA
+        </span>
+
+
+        <h2>
+            What we believe.
+        </h2>
+
+    </div>
+
+
+    <div class="values-grid">
+
+
+        <!-- CARD 1 -->
+
+        <div class="value-card">
+
+
+            <div class="value-icon">
+                ✦
+            </div>
+
+
+            <h3>
+                Timeless Style
+            </h3>
+
+
+            <p>
+
+                Designs chosen to stay beautiful
+                beyond changing trends and seasons.
+
+            </p>
+
+        </div>
+
+
+        <!-- CARD 2 -->
+
+        <div class="value-card">
+
+
+            <div class="value-icon">
+                ♡
+            </div>
+
+
+            <h3>
+                Made With Love
+            </h3>
+
+
+            <p>
+
+                Jewellery selected with attention
+                to beauty, detail and individuality.
+
+            </p>
+
+        </div>
+
+
+        <!-- CARD 3 -->
+
+        <div class="value-card">
+
+
+            <div class="value-icon">
+                ◇
+            </div>
+
+
+            <h3>
+                For Every Moment
+            </h3>
+
+
+            <p>
+
+                From everyday elegance to memorable
+                celebrations, find something uniquely yours.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     FINAL STORY
+===================================================== -->
+
+<section class="final-story">
+
+
+    <div class="final-story-content">
+
+
+        <span class="section-label">
+            MIHA JEWELLERY
+        </span>
+
+
+        <h2>
+            Your style.
+            <br>
+            Your story.
+        </h2>
+
+
+        <p>
+
+            We believe the best jewellery doesn't simply
+            complete an outfit. It becomes part of your
+            story, your memories and the moments that
+            matter.
+
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+
+    <div class="footer-grid">
+
+
+        <!-- BRAND -->
+
+        <div class="footer-column">
+
+            <div class="footer-logo">
+                MIHA
+            </div>
+
+
+            <p>
+
+                Jewellery designed to celebrate
+                your individuality, your memories
+                and every beautiful moment.
+
+            </p>
+
+        </div>
+
+
+        <!-- SHOP -->
+
+        <div class="footer-column">
+
+            <h3>
+                SHOP
+            </h3>
+
+
+            <a href="necklace.html">
+                Necklaces
+            </a>
+
+            <a href="bracelets.html">
+                Bracelets
+            </a>
+
+            <a href="earing.html">
+                Earrings
+            </a>
+
+            <a href="ring.html">
+                Rings
+            </a>
+
+        </div>
+
+
+        <!-- COMPANY -->
+
+        <div class="footer-column">
+
+            <h3>
+                COMPANY
+            </h3>
+
+
+            <a href="aboutmiha.html">
+                About Us
+            </a>
+
+            <a href="contactmiha.html">
+                Contact Us
+            </a>
+
+            <a href="customer.html">
+                My Account
+            </a>
+
+        </div>
+
+
+        <!-- CONTACT -->
+
+        <div class="footer-column">
+
+            <h3>
+                MIHA
+            </h3>
+
+
+            <p>
+                Mumbai, India
+            </p>
+
+
+            <p>
+                Made with love ✦
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="copyright">
+
+        © 2026 MIHA Jewellery.
+        All Rights Reserved.
+
+    </div>
+
+</footer>
+
+
+</body>
+
+</html>

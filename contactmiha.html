@@ -1,0 +1,849 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Contact Us | MIHA Jewellery</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:"DM Sans",sans-serif;
+    background:#faf7f0;
+    color:#171717;
+}
+
+
+/* NAVBAR */
+
+.navbar{
+    height:78px;
+    background:#171717;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:0 6%;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+.logo{
+    font-family:"Playfair Display",serif;
+    font-size:30px;
+    letter-spacing:4px;
+    color:#c7a15a;
+    text-decoration:none;
+}
+
+.nav-links{
+    display:flex;
+    gap:32px;
+}
+
+.nav-links a{
+    color:white;
+    text-decoration:none;
+    font-size:13px;
+    transition:.3s;
+}
+
+.nav-links a:hover{
+    color:#c7a15a;
+}
+
+.nav-icons{
+    display:flex;
+    gap:18px;
+}
+
+.nav-icons a{
+    color:white;
+    display:flex;
+    align-items:center;
+    text-decoration:none;
+}
+
+.nav-icons a:hover{
+    color:#c7a15a;
+}
+
+
+/* HERO */
+
+.hero{
+    background:#171717;
+    color:white;
+    text-align:center;
+    padding:85px 20px;
+}
+
+.hero span{
+    color:#c7a15a;
+    text-transform:uppercase;
+    letter-spacing:4px;
+    font-size:12px;
+}
+
+.hero h1{
+    font-family:"Playfair Display",serif;
+    font-size:55px;
+    margin:15px 0;
+}
+
+.hero p{
+    color:#ccc;
+    font-size:15px;
+}
+
+
+/* CONTACT */
+
+.contact-section{
+    max-width:1200px;
+    margin:auto;
+    padding:90px 30px;
+}
+
+.contact-grid{
+    display:grid;
+    grid-template-columns:1fr 1.2fr;
+    gap:60px;
+}
+
+
+/* INFO */
+
+.contact-info span{
+    color:#c7a15a;
+    text-transform:uppercase;
+    letter-spacing:3px;
+    font-size:12px;
+}
+
+.contact-info h2{
+    font-family:"Playfair Display",serif;
+    font-size:42px;
+    margin:15px 0 20px;
+}
+
+.contact-info > p{
+    color:#666;
+    line-height:1.8;
+    margin-bottom:35px;
+}
+
+.info-item{
+    display:flex;
+    gap:18px;
+    margin-bottom:25px;
+    align-items:flex-start;
+}
+
+.info-icon{
+    width:45px;
+    height:45px;
+    border:1px solid #c7a15a;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:#c7a15a;
+    flex-shrink:0;
+}
+
+.info-item h3{
+    font-family:"Playfair Display",serif;
+    font-size:18px;
+    margin-bottom:4px;
+}
+
+.info-item p{
+    color:#777;
+    font-size:13px;
+}
+
+
+/* FORM */
+
+.contact-form{
+    background:white;
+    padding:40px;
+    box-shadow:0 15px 40px rgba(0,0,0,.07);
+}
+
+.contact-form h2{
+    font-family:"Playfair Display",serif;
+    font-size:30px;
+    margin-bottom:30px;
+}
+
+.form-row{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:20px;
+}
+
+.form-group{
+    margin-bottom:20px;
+}
+
+.form-group label{
+    display:block;
+    font-size:12px;
+    font-weight:600;
+    margin-bottom:8px;
+    letter-spacing:.5px;
+}
+
+.form-group input,
+.form-group textarea{
+    width:100%;
+    padding:14px 15px;
+    border:1px solid #ddd;
+    outline:none;
+    font-family:"DM Sans",sans-serif;
+    font-size:14px;
+    background:#fafafa;
+}
+
+.form-group input:focus,
+.form-group textarea:focus{
+    border-color:#c7a15a;
+}
+
+.form-group textarea{
+    height:140px;
+    resize:vertical;
+}
+
+.submit-btn{
+    width:100%;
+    padding:15px;
+    border:none;
+    background:#171717;
+    color:white;
+    font-size:12px;
+    font-weight:600;
+    letter-spacing:2px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.submit-btn:hover{
+    background:#c7a15a;
+    color:#171717;
+}
+
+
+/* FAQ */
+
+.faq{
+    background:white;
+    padding:80px 6%;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:45px;
+}
+
+.section-title span{
+    color:#c7a15a;
+    font-size:12px;
+    letter-spacing:3px;
+}
+
+.section-title h2{
+    font-family:"Playfair Display",serif;
+    font-size:40px;
+    margin-top:12px;
+}
+
+.faq-grid{
+    max-width:900px;
+    margin:auto;
+}
+
+details{
+    border-bottom:1px solid #ddd;
+    padding:20px 0;
+}
+
+summary{
+    cursor:pointer;
+    font-weight:600;
+    font-size:15px;
+}
+
+details p{
+    color:#777;
+    line-height:1.8;
+    margin-top:15px;
+    font-size:14px;
+}
+
+
+/* FOOTER */
+
+footer{
+    background:#171717;
+    color:white;
+    padding:60px 6% 30px;
+}
+
+.footer-grid{
+    max-width:1400px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:2fr 1fr 1fr 1fr;
+    gap:50px;
+}
+
+.footer-logo{
+    font-family:"Playfair Display",serif;
+    color:#c7a15a;
+    font-size:30px;
+    letter-spacing:3px;
+    margin-bottom:15px;
+}
+
+footer h3{
+    color:#c7a15a;
+    font-size:14px;
+    margin-bottom:18px;
+}
+
+footer p,
+footer a{
+    color:#aaa;
+    font-size:13px;
+    line-height:1.8;
+}
+
+footer a{
+    display:block;
+    text-decoration:none;
+    margin-bottom:8px;
+}
+
+footer a:hover{
+    color:white;
+}
+
+.copyright{
+    border-top:1px solid #333;
+    margin-top:40px;
+    padding-top:20px;
+    text-align:center;
+    color:#777;
+    font-size:12px;
+}
+
+
+/* RESPONSIVE */
+
+@media(max-width:850px){
+
+    .nav-links{
+        display:none;
+    }
+
+    .contact-grid{
+        grid-template-columns:1fr;
+    }
+
+    .footer-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+}
+
+@media(max-width:600px){
+
+    .hero h1{
+        font-size:40px;
+    }
+
+    .form-row{
+        grid-template-columns:1fr;
+        gap:0;
+    }
+
+    .contact-form{
+        padding:25px;
+    }
+
+}
+
+@media(max-width:500px){
+
+    .footer-grid{
+        grid-template-columns:1fr;
+    }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+
+<!-- NAVBAR -->
+
+<nav class="navbar">
+
+    <a href="homepg.html" class="logo">MIHA</a>
+
+    <div class="nav-links">
+
+        <a href="homepg.html">HOME</a>
+        <a href="necklace.html">NECKLACES</a>
+        <a href="bracelets.html">BRACELETS</a>
+        <a href="earing.html">EARRINGS</a>
+        <a href="ring.html">RINGS</a>
+        <a href="aboutmiha.html">ABOUT</a>
+        <a href="contactmiha.html">CONTACT</a>
+
+    </div>
+
+    <div class="nav-icons">
+
+        <!-- ACCOUNT -->
+
+        <a href="customer.html" title="My Account">
+
+            <svg width="23" height="23" viewBox="0 0 24 24"
+                 fill="none"
+                 xmlns="http://www.w3.org/2000/svg">
+
+                <circle cx="12" cy="7" r="4"
+                        stroke="currentColor"
+                        stroke-width="1.8"/>
+
+                <path d="M4 21C4.8 16.8 7.4 14.5 12 14.5C16.6 14.5 19.2 16.8 20 21"
+                      stroke="currentColor"
+                      stroke-width="1.8"
+                      stroke-linecap="round"/>
+
+            </svg>
+
+        </a>
+
+        <!-- BAG -->
+
+        <a href="customer.html" title="Shopping Bag">
+
+            <svg width="23" height="23" viewBox="0 0 24 24"
+                 fill="none"
+                 xmlns="http://www.w3.org/2000/svg">
+
+                <path d="M5 8.5H19L18 21H6L5 8.5Z"
+                      stroke="currentColor"
+                      stroke-width="1.8"/>
+
+                <path d="M9 9V6.5C9 4.8 10.3 3.5 12 3.5C13.7 3.5 15 4.8 15 6.5V9"
+                      stroke="currentColor"
+                      stroke-width="1.8"
+                      stroke-linecap="round"/>
+
+            </svg>
+
+        </a>
+
+    </div>
+
+</nav>
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+    <span>WE'D LOVE TO HEAR FROM YOU</span>
+
+    <h1>Contact MIHA</h1>
+
+    <p>
+        Have a question? We're here to help.
+    </p>
+
+</section>
+
+
+<!-- CONTACT -->
+
+<section class="contact-section">
+
+    <div class="contact-grid">
+
+
+        <!-- LEFT -->
+
+        <div class="contact-info">
+
+            <span>GET IN TOUCH</span>
+
+            <h2>Let's talk.</h2>
+
+            <p>
+                Whether you have a question about our jewellery,
+                your order, delivery or anything else, feel free
+                to reach out to us.
+            </p>
+
+
+            <div class="info-item">
+
+                <div class="info-icon">
+
+                    ✉
+
+                </div>
+
+                <div>
+
+                    <h3>Email</h3>
+
+                    <p>
+                        support@miha-jewellery.com
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="info-item">
+
+                <div class="info-icon">
+
+                    ☎
+
+                </div>
+
+                <div>
+
+                    <h3>Phone</h3>
+
+                    <p>
+                        +91 XXXXX XXXXX
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="info-item">
+
+                <div class="info-icon">
+
+                    ◇
+
+                </div>
+
+                <div>
+
+                    <h3>Location</h3>
+
+                    <p>
+                        Mumbai, Maharashtra, India
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="info-item">
+
+                <div class="info-icon">
+
+                    ⏱
+
+                </div>
+
+                <div>
+
+                    <h3>Working Hours</h3>
+
+                    <p>
+                        Monday – Saturday<br>
+                        10:00 AM – 7:00 PM
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- FORM -->
+
+        <div class="contact-form">
+
+            <h2>Send us a message</h2>
+
+            <form onsubmit="sendMessage(event)">
+
+                <div class="form-row">
+
+                    <div class="form-group">
+
+                        <label>FIRST NAME</label>
+
+                        <input
+                            type="text"
+                            placeholder="Your first name"
+                            required
+                        >
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label>LAST NAME</label>
+
+                        <input
+                            type="text"
+                            placeholder="Your last name"
+                            required
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>EMAIL ADDRESS</label>
+
+                    <input
+                        type="email"
+                        placeholder="you@example.com"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>PHONE NUMBER</label>
+
+                    <input
+                        type="tel"
+                        placeholder="+91 XXXXX XXXXX"
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>SUBJECT</label>
+
+                    <input
+                        type="text"
+                        placeholder="How can we help?"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>MESSAGE</label>
+
+                    <textarea
+                        placeholder="Write your message here..."
+                        required
+                    ></textarea>
+
+                </div>
+
+
+                <button class="submit-btn" type="submit">
+
+                    SEND MESSAGE
+
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- FAQ -->
+
+<section class="faq">
+
+    <div class="section-title">
+
+        <span>HELP CENTER</span>
+
+        <h2>Frequently Asked Questions</h2>
+
+    </div>
+
+
+    <div class="faq-grid">
+
+        <details>
+
+            <summary>
+                How can I track my order?
+            </summary>
+
+            <p>
+                Once your order has been processed, you can use
+                the order information provided during checkout
+                to follow your delivery status.
+            </p>
+
+        </details>
+
+
+        <details>
+
+            <summary>
+                How long does delivery take?
+            </summary>
+
+            <p>
+                Delivery information will be provided during
+                checkout based on your location.
+            </p>
+
+        </details>
+
+
+        <details>
+
+            <summary>
+                Can I change my order?
+            </summary>
+
+            <p>
+                Please contact us as soon as possible if you
+                need to make changes to an order.
+            </p>
+
+        </details>
+
+
+        <details>
+
+            <summary>
+                How can I contact MIHA?
+            </summary>
+
+            <p>
+                You can use the contact form on this page or
+                reach out using the contact details provided above.
+            </p>
+
+        </details>
+
+    </div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <div class="footer-grid">
+
+        <div>
+
+            <div class="footer-logo">MIHA</div>
+
+            <p>
+                Jewellery designed to celebrate your individuality,
+                your memories and every beautiful moment.
+            </p>
+
+        </div>
+
+        <div>
+
+            <h3>SHOP</h3>
+
+            <a href="necklace.html">Necklaces</a>
+            <a href="bracelets.html">Bracelets</a>
+            <a href="earing.html">Earrings</a>
+            <a href="ring.html">Rings</a>
+
+        </div>
+
+        <div>
+
+            <h3>COMPANY</h3>
+
+            <a href="aboutmiha.html">About Us</a>
+            <a href="contactmiha.html">Contact Us</a>
+
+        </div>
+
+        <div>
+
+            <h3>MIHA</h3>
+
+            <p>Mumbai, India</p>
+            <p>Made with love ✦</p>
+
+        </div>
+
+    </div>
+
+    <div class="copyright">
+        © 2026 MIHA Jewellery. All Rights Reserved.
+    </div>
+
+</footer>
+
+
+<script>
+
+function sendMessage(event){
+
+    event.preventDefault();
+
+    alert(
+        "Thank you for contacting MIHA Jewellery. " +
+        "We will get back to you soon."
+    );
+
+    event.target.reset();
+
+}
+
+</script>
+
+</body>
+</html>

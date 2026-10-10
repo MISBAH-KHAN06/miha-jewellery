@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>MIHA Jewellery | Rings</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:"DM Sans",sans-serif;
+    background:#faf7f0;
+    color:#171717;
+}
+
+/* NAVBAR */
+
+.navbar{
+    height:78px;
+    background:#171717;
+    color:white;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:0 6%;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+.logo{
+    font-family:"Playfair Display",serif;
+    font-size:30px;
+    letter-spacing:4px;
+    color:#c7a15a;
+    text-decoration:none;
+}
+
+.nav-links{
+    display:flex;
+    gap:35px;
+    align-items:center;
+}
+
+.nav-links a{
+    color:white;
+    text-decoration:none;
+    font-size:14px;
+    font-weight:500;
+    transition:.3s;
+}
+
+.nav-links a:hover{
+    color:#c7a15a;
+}
+
+.nav-icons{
+    display:flex;
+    gap:18px;
+    font-size:20px;
+}
+
+.nav-icons a{
+    color:white;
+    text-decoration:none;
+}
+
+/* HERO */
+
+.hero{
+    background:#171717;
+    color:white;
+    text-align:center;
+    padding:75px 20px;
+}
+
+.hero p{
+    color:#c7a15a;
+    text-transform:uppercase;
+    letter-spacing:4px;
+    font-size:12px;
+    margin-bottom:15px;
+}
+
+.hero h1{
+    font-family:"Playfair Display",serif;
+    font-size:54px;
+    font-weight:600;
+    margin-bottom:15px;
+}
+
+.hero span{
+    color:#cfcfcf;
+    font-size:15px;
+}
+
+/* CONTAINER */
+
+.container{
+    width:88%;
+    max-width:1400px;
+    margin:auto;
+}
+
+/* TOOLBAR */
+
+.toolbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:20px;
+    margin:45px 0 30px;
+}
+
+.search{
+    flex:1;
+    max-width:500px;
+    position:relative;
+}
+
+.search input{
+    width:100%;
+    padding:15px 20px;
+    border:1px solid #ddd;
+    background:white;
+    outline:none;
+    font-size:14px;
+}
+
+.sort select{
+    padding:15px 20px;
+    border:1px solid #ddd;
+    background:white;
+    font-size:14px;
+    outline:none;
+}
+
+/* PRODUCT GRID */
+
+.product-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:28px;
+    padding-bottom:80px;
+}
+
+/* CARD */
+
+.product-card{
+    background:white;
+    position:relative;
+    overflow:hidden;
+    transition:.35s;
+}
+
+.product-card:hover{
+    transform:translateY(-6px);
+    box-shadow:0 15px 35px rgba(0,0,0,.10);
+}
+
+.image-box{
+    position:relative;
+    height:340px;
+    overflow:hidden;
+    background:#f3f1ec;
+}
+
+.image-box img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:.5s;
+}
+
+.product-card:hover .image-box img{
+    transform:scale(1.07);
+}
+
+/* BADGE */
+
+.badge{
+    position:absolute;
+    top:15px;
+    left:15px;
+    background:#171717;
+    color:white;
+    padding:7px 12px;
+    font-size:10px;
+    letter-spacing:1px;
+    z-index:2;
+}
+
+.badge.sale{
+    background:#c7a15a;
+}
+
+/* WISHLIST */
+
+.wishlist{
+    position:absolute;
+    right:15px;
+    top:15px;
+    width:38px;
+    height:38px;
+    border-radius:50%;
+    border:none;
+    background:white;
+    cursor:pointer;
+    font-size:18px;
+    z-index:2;
+    box-shadow:0 3px 10px rgba(0,0,0,.1);
+}
+
+.wishlist:hover{
+    color:#c7a15a;
+}
+
+/* PRODUCT INFO */
+
+.product-info{
+    padding:20px;
+}
+
+.rating{
+    color:#c7a15a;
+    font-size:13px;
+    margin-bottom:8px;
+}
+
+.product-name{
+    font-family:"Playfair Display",serif;
+    font-size:18px;
+    line-height:1.4;
+    min-height:52px;
+}
+
+.price{
+    margin:12px 0 18px;
+    font-size:17px;
+    font-weight:700;
+}
+
+/* BUTTON */
+
+.buy-btn{
+    display:block;
+    width:100%;
+    text-align:center;
+    text-decoration:none;
+    background:#171717;
+    color:white;
+    padding:13px;
+    font-size:12px;
+    font-weight:600;
+    letter-spacing:1.5px;
+    transition:.3s;
+}
+
+.buy-btn:hover{
+    background:#c7a15a;
+    color:#171717;
+}
+
+/* FOOTER */
+
+footer{
+    background:#171717;
+    color:white;
+    padding:60px 6% 30px;
+}
+
+.footer-grid{
+    display:grid;
+    grid-template-columns:2fr 1fr 1fr 1fr;
+    gap:50px;
+    max-width:1400px;
+    margin:auto;
+}
+
+.footer-logo{
+    font-family:"Playfair Display",serif;
+    font-size:30px;
+    color:#c7a15a;
+    letter-spacing:3px;
+    margin-bottom:15px;
+}
+
+footer p{
+    color:#aaa;
+    font-size:13px;
+    line-height:1.8;
+}
+
+footer h3{
+    font-size:14px;
+    margin-bottom:18px;
+    color:#c7a15a;
+}
+
+footer a{
+    display:block;
+    color:#aaa;
+    text-decoration:none;
+    font-size:13px;
+    margin-bottom:10px;
+}
+
+footer a:hover{
+    color:white;
+}
+
+.copyright{
+    border-top:1px solid #333;
+    margin-top:40px;
+    padding-top:20px;
+    text-align:center;
+    color:#777;
+    font-size:12px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:1000px){
+
+    .product-grid{
+        grid-template-columns:repeat(3,1fr);
+    }
+
+    .nav-links{
+        gap:15px;
+    }
+
+}
+
+@media(max-width:750px){
+
+    .navbar{
+        padding:0 20px;
+    }
+
+    .nav-links{
+        display:none;
+    }
+
+    .hero h1{
+        font-size:40px;
+    }
+
+    .toolbar{
+        flex-direction:column;
+        align-items:stretch;
+    }
+
+    .search{
+        max-width:none;
+    }
+
+    .product-grid{
+        grid-template-columns:repeat(2,1fr);
+        gap:15px;
+    }
+
+    .image-box{
+        height:270px;
+    }
+
+    .footer-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+}
+
+@media(max-width:500px){
+
+    .product-grid{
+        grid-template-columns:1fr;
+    }
+
+    .image-box{
+        height:350px;
+    }
+
+    .footer-grid{
+        grid-template-columns:1fr;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<nav class="navbar">
+
+    <a href="homepg.html" class="logo">MIHA</a>
+
+    <div class="nav-links">
+        <a href="homepg.html">HOME</a>
+        <a href="necklace.html">NECKLACES</a>
+        <a href="bracelets.html">BRACELETS</a>
+        <a href="earing.html">EARRINGS</a>
+        <a href="ring.html">RINGS</a>
+        <a href="aboutmiha.html">ABOUT</a>
+        <a href="contactmiha.html">CONTACT</a>
+    </div>
+
+    <div class="nav-icons">
+        <a href="customer.html">♙</a>
+        <a href="customer.html">🛍</a>
+    </div>
+
+</nav>
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+    <p>MIHA COLLECTION</p>
+
+    <h1>Elegant Rings</h1>
+
+    <span>Timeless designs made to make every moment sparkle.</span>
+
+</section>
+
+
+<div class="container">
+
+    <!-- TOOLBAR -->
+
+    <div class="toolbar">
+
+        <div class="search">
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search rings..."
+                onkeyup="searchProducts()"
+            >
+        </div>
+
+        <div class="sort">
+            <select id="sortSelect" onchange="sortProducts()">
+                <option value="default">Sort By</option>
+                <option value="low">Price: Low to High</option>
+                <option value="high">Price: High to Low</option>
+                <option value="name">Name A-Z</option>
+            </select>
+        </div>
+
+    </div>
+
+
+    <!-- PRODUCTS -->
+
+    <div class="product-grid" id="productGrid"></div>
+
+</div>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <div class="footer-grid">
+
+        <div>
+            <div class="footer-logo">MIHA</div>
+
+            <p>
+                Jewellery designed to celebrate your individuality,
+                your memories and every beautiful moment.
+            </p>
+        </div>
+
+        <div>
+            <h3>SHOP</h3>
+            <a href="necklace.html">Necklaces</a>
+            <a href="bracelets.html">Bracelets</a>
+            <a href="earing.html">Earrings</a>
+            <a href="ring.html">Rings</a>
+        </div>
+
+        <div>
+            <h3>HELP</h3>
+            <a href="contactmiha.html">Contact Us</a>
+            <a href="aboutmiha.html">About Us</a>
+            <a href="customer.html">My Account</a>
+        </div>
+
+        <div>
+            <h3>MIHA</h3>
+            <p>Mumbai, India</p>
+            <p>Made with love ✦</p>
+        </div>
+
+    </div>
+
+    <div class="copyright">
+        © 2026 MIHA Jewellery. All Rights Reserved.
+    </div>
+
+</footer>
+
+
+<script>
+
+const products = [
+
+    ["r1.jpg","Classic Vintage Diamond Solitaire Ring",649,"BESTSELLER"],
+
+    ["r2.jpg","Criss Cross Band Diamond Ring",600,""],
+
+    ["r3.jpg","Joined Flower Petal Diamond Ring",800,"TRENDING"],
+
+    ["r4.jpg","Rose Gold Leaf Wedding Band",749,"NEW"],
+
+    ["r5.jpg","Cushion Cut Halo Silver Ring",799,""],
+
+    ["r6.jpg","Antique Six Oval Cut Stone Ring",600,""],
+
+    ["r8.jpg","Three Stone Cross Over Platinum Ring",549,""],
+
+    ["r9.jpg","Asscher Cut Diamond Mosaic Ring",500,"SALE"],
+
+    ["r10.jpg","Vintage Rose Gold Wedding Ring",849,"NEW"]
+
+];
+
+
+function displayProducts(list = products){
+
+    const grid = document.getElementById("productGrid");
+
+    grid.innerHTML = "";
+
+    list.forEach((product,index)=>{
+
+        const [image,name,price,badge] = product;
+
+        const badgeHTML = badge
+            ? `<div class="badge ${badge === "SALE" ? "sale" : ""}">${badge}</div>`
+            : "";
+
+        grid.innerHTML += `
+
+        <div class="product-card">
+
+            <div class="image-box">
+
+                ${badgeHTML}
+
+                <button class="wishlist" onclick="addWishlist(this)">
+                    ♡
+                </button>
+
+                <img src="${image}" alt="${name}">
+
+            </div>
+
+            <div class="product-info">
+
+                <div class="rating">★★★★★</div>
+
+                <div class="product-name">
+                    ${name}
+                </div>
+
+                <div class="price">
+                    ₹${price}
+                </div>
+
+                <a
+                    class="buy-btn"
+                    href="customer.html?product=${encodeURIComponent(name)}&price=${price}&image=${encodeURIComponent(image)}"
+                >
+                    BUY NOW
+                </a>
+
+            </div>
+
+        </div>
+
+        `;
+
+    });
+
+}
+
+
+function searchProducts(){
+
+    const value = document
+        .getElementById("searchInput")
+        .value
+        .toLowerCase();
+
+    const filtered = products.filter(product =>
+        product[1].toLowerCase().includes(value)
+    );
+
+    displayProducts(filtered);
+
+}
+
+
+function sortProducts(){
+
+    const value = document.getElementById("sortSelect").value;
+
+    let sorted = [...products];
+
+    if(value === "low"){
+        sorted.sort((a,b)=>a[2]-b[2]);
+    }
+
+    if(value === "high"){
+        sorted.sort((a,b)=>b[2]-a[2]);
+    }
+
+    if(value === "name"){
+        sorted.sort((a,b)=>a[1].localeCompare(b[1]));
+    }
+
+    displayProducts(sorted);
+
+}
+
+
+function addWishlist(button){
+
+    button.innerHTML = "♥";
+    button.style.color = "#c7a15a";
+
+}
+
+
+displayProducts();
+
+</script>
+
+</body>
+</html>
